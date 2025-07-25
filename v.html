@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Airbnb Clone</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+    }
+
+    .banner {
+      background-color: white;
+      border-radius: 30px;
+      position: sticky;
+      top: 0px;
+      z-index: 999;
+    }
+
+    .flexbox {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 80px;
+    }
+
+    .l1, .l2, .l3, .l4 {
+      border-radius: 60px;
+      border: none;
+      font-size: 16px;
+      padding: 10px 20px;
+      background-color: white;
+    }
+
+    .l2 {
+      color: gray;
+    }
+
+    .l3 {
+      font-size: 14px;
+    }
+
+    .l4 {
+      border: 1px solid black;
+    }
+
+    .search-button {
+      background-color: #ff385c;
+      border: none;
+      border-radius: 40px;
+      width: 100px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      color: white;
+    }
+
+    .search-button:hover {
+      background-color: #e12c50;
+    }
+
+    .search-button:focus {
+      outline: 2px solid #ff385c;
+      outline-offset: 2px;
+    }
+
+    .but {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+      border-radius: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      gap: 50px;
+      margin: 10px 400px;
+    }
+
+    .b1, .b2, .b3, .b4 {
+      font-size: 14px;
+      border-left: none;
+      border-top: none;
+      border-bottom: none;
+      border-color: lightgray;
+      background-color: white;
+    }
+
+    .i1 {
+      height: 30px;
+      width: 30px;
+    }
+
+    .i11 {
+      font-size: 10px;
+      font-weight: 500;
+    }
+
+    .icon-menu {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 30px;
+      padding: 20px 90px;
+      gap: 40px;
+      position: sticky;
+      top: 60px;
+      z-index: 998;
+    }
+
+    .icon1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+    }
+
+    .icon1 img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .filter-options {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-left: auto;
+    }
+
+    .filter-button {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .filter-button img {
+      width: 18px;
+      height: 18px;
+    }
+
+    .main {
+      padding: 20px 90px;
+      display: flex;
+      margin-top: 30px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 310px;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .img {
+      height: 300px;
+      width: 310px;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: transform 0.2s ease;
+    }
+
+    .img:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .flex, .flexx, .flex1 {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+    }
+
+    .flexx {
+      justify-content: space-evenly;
+      padding-right: 30px;
+    }
+
+    .flex1 {
+      justify-content: space-evenly;
+      padding-left: 530px;
+    }
+
+    .show {
+      font-size: 16px;
+      border-radius: 50px;
+      background-color: black;
+      color: white;
+      padding: 15px;
+      position: fixed;
+      left: 47%;
+      bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .but {
+        margin: 10px 20px;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .flexbox, .icon-menu {
+        padding: 20px;
+      }
+
+      .flex1 {
+        padding-left: 0;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="banner">
+    <div class="flexbox">
+      <div>
+        <button class="l1">Airbnb</button>
+      </div>
+      <div>
+        <button class="l2">Anywhere</button>
+        <button class="l2">Any week</button>
+        <button class="l2">Add guests</button>
+        <button class="search-button">Search</button>
+      </div>
+      <div>
+        <button class="l3">Airbnb your home</button>
+        <button class="l3">🌐</button>
+        <button class="l4">☰ 😊</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="icon-menu">
+    <div class="icon1">
+      <img src="https://cdn-icons-png.flaticon.com/128/869/869636.png" alt="icon" />
+      <span class="i11">Amazing pools</span>
+    </div>
+    <div class="icon1">
+      <img src="https://cdn-icons-png.flaticon.com/128/478/478543.png" alt="icon" />
+      <span class="i11">Castles</span>
+    </div>
+    <div class="icon1">
+      <img src="https://cdn-icons-png.flaticon.com/128/1973/1973869.png" alt="icon" />
+      <span class="i11">Camping</span>
+    </div>
+    <!-- Add more icons as needed -->
+    <div class="filter-options">
+      <button class="filter-button">
+        <img src="https://cdn-icons-png.flaticon.com/128/854/854878.png" alt="Filter" />
+        Filters
+      </button>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="card">
+      <img src="https://a0.muscache.com/im/pictures/miso/Hosting-591280179947506854/original/eb2030f3-d931-432b-bf7e-d56c6b772930.jpeg?im_w=720" alt="Property" class="img" />
+      <div class="flex"><b>Dhalewadi, India</b><b>★ 4.92</b></div>
+      <div class="flex">110 Kilometers away</div>
+      <div class="flex">9–14 Feb</div>
+      <div class="flex"><b>₹7,006</b> night</div>
+    </div>
+
+    <!-- You can duplicate .card for more listings -->
+  </div>
+
+  <div class="show">Show Map</div>
+
+</body>
+</html>
